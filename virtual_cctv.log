@@ -1,0 +1,35 @@
+2025-09-07 14:55:46,314 - INFO - Starting Virtual CCTV System...
+2025-09-07 14:55:46,315 - INFO - Started RTSP stream: rtsp://admin:admin@123@192.168.1.111:8554/Streaming/Channels/101
+2025-09-07 14:55:46,316 - INFO - WS-Discovery responder started on UDP 3702
+2025-09-07 14:55:46,577 - INFO - ============================================================
+2025-09-07 14:55:46,578 - INFO - Virtual CCTV System Started Successfully!
+2025-09-07 14:55:46,578 - INFO - ============================================================
+2025-09-07 14:55:46,578 - INFO - Device IP: 192.168.1.111
+2025-09-07 14:55:46,578 - INFO - HTTP Port: 80
+2025-09-07 14:55:46,578 - INFO - RTSP Port: 8554
+2025-09-07 14:55:46,578 - INFO - Username: admin
+2025-09-07 14:55:46,578 - INFO - Password: admin@123
+2025-09-07 14:55:46,578 - INFO - RTSP URLs:
+2025-09-07 14:55:46,578 - INFO -   Main: rtsp://admin:admin@123@192.168.1.111:8554/Streaming/Channels/101
+2025-09-07 14:55:46,578 - INFO -   Sub : rtsp://admin:admin@123@192.168.1.111:8554/Streaming/Channels/102
+2025-09-07 14:55:46,578 - INFO - ONVIF: http://192.168.1.111:80/onvif/device_service
+2025-09-07 14:56:14,433 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:56f65b39-a85c-40a7-8e7b-4fb67f78d147)
+2025-09-07 14:56:14,434 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:14,435 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:56f65b39-a85c-40a7-8e7b-4fb67f78d147)
+2025-09-07 14:56:14,435 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:14,435 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:56f65b39-a85c-40a7-8e7b-4fb67f78d147)
+2025-09-07 14:56:14,435 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:25,347 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:e8d00e86-9bac-4613-ad3c-6e4232f80b29)
+2025-09-07 14:56:25,348 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:25,348 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:e8d00e86-9bac-4613-ad3c-6e4232f80b29)
+2025-09-07 14:56:25,348 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:25,348 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: uuid:e8d00e86-9bac-4613-ad3c-6e4232f80b29)
+2025-09-07 14:56:25,348 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 14:56:58,465 - INFO - WS-Discovery probe from 192.168.1.101 (MessageID: )
+2025-09-07 14:56:58,466 - INFO - Sent WS-Discovery response to 192.168.1.101
+2025-09-07 15:05:45,140 - ERROR - FFmpeg process died
+2025-09-07 15:08:53,122 - INFO - Received signal 2
+2025-09-07 15:08:53,682 - INFO - Stopping Virtual CCTV System...
+2025-09-07 15:08:53,683 - INFO - RTSP stream stopped
+2025-09-07 15:08:54,237 - INFO - WS-Discovery responder stopped
+2025-09-07 15:08:54,675 - INFO - Virtual CCTV System stopped

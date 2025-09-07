@@ -7,7 +7,7 @@ import cv2
 import subprocess
 import time
 
-VIDEO_PATH = "videos/Shoplifting (3).mp4"  # your MP4 file
+VIDEO_PATH = "videos/6.mp4"  # your MP4 file
 RTSP_URL = "rtsp://192.168.1.111:8554/stream1"  # local RTSP server
 FPS = 25  # match your video file fps
 
