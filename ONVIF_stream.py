@@ -5,8 +5,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import re
 
 DEVICE_NAME = "PythonSimCam"
-RTSP_URL = "rtsp://192.168.1.111:8554/stream1"
-SERVER_IP = "192.168.1.111"
+RTSP_URL = "rtsp://192.168.1.100:554/Streaming/Channels/101"
+SERVER_IP = "192.168.1.100"
 HTTP_PORT = 10000
 XADDR = f"http://{SERVER_IP}:{HTTP_PORT}/onvif/device_service"
 DEVICE_UUID = f"urn:uuid:{uuid.uuid4()}"
