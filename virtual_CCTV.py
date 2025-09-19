@@ -15,12 +15,12 @@ import hashlib
 from datetime import datetime, timezone
 
 # --------- USER CONFIG ----------
-DEVICE_IP = "192.168.1.111"
+DEVICE_IP = "192.168.1.100"
 HTTP_PORT = 8080           # 80 or 8080 (root required for 80)
 RTSP_PORT = 554
 USERNAME = "admin"
 PASSWORD = "admin@123"
-INPUT_FILE = Path("videos/6.mp4")
+INPUT_FILE = Path("videos/Shoplifting (3).mp4")
 DEVICE_NAME = "VirtualCCTV"
 PROFILE_TOKEN = "Profile_1"
 REALM = "onvif"
