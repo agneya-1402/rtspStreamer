@@ -1,11 +1,11 @@
 logLevel: info
 rtsp: yes
-protocols: [tcp]
-encryption: "no"
-# Use RTSP 554 (standard!)
+rtspTransports: [tcp]            # replaces 'protocols'
+rtspEncryption: "no"             # replaces 'encryption'
+# Use RTSP 8554 (standard unprivileged port, change if needed)
 rtspAddress: :554
 
-authMethods: [digest]
+rtspAuthMethods: [digest]        # replaces 'authMethods'
 authMethod: internal
 authInternalUsers:
   - user: admin
@@ -15,7 +15,7 @@ authInternalUsers:
       - action: read
 
 paths:
-  "Streaming/Channels/101":
+  "Streaming/Channels/101": 
     source: publisher
   "~^.*$":
     source: publisher
