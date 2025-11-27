@@ -11,11 +11,11 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from datetime import datetime, timezone
 
 # ----------- USER CONFIG -----------
-DEVICE_IP = "192.168.1.109"  # Your machine's LAN IP address, also where MediaMTX listens
+DEVICE_IP = "192.168.1.113"  # Your machine's LAN IP address, also where MediaMTX listens.  127.0.0.1
 HTTP_PORT = 8080             # ONVIF HTTP port
 
 MEDIAMTX_IP = DEVICE_IP
-MEDIAMTX_PORT = 554       # MediaMTX RTSP port
+MEDIAMTX_PORT = 8554       # MediaMTX RTSP port
 
 USERNAME = "admin"
 PASSWORD = "admin@123"
@@ -24,11 +24,11 @@ DEVICE_UUID = f"urn:uuid:{uuid.uuid4()}"
 WS_DISCOVERY_PORT = 3702
 
 VIDEO_FILES = [
+    Path("videos/normal_1.mp4"),
+    Path("videos/normal_3.mp4"),
     Path("videos/Shoplifting (1).mp4"),
+    Path("videos/6.mp4"),
     Path("videos/Shoplifting (3).mp4"),
-    Path("videos/Shoplifting (55).mp4"),
-    Path("videos/Normal (6).mp4"),
-    Path("videos/Shoplifting (1).mp4"),
 ]
 
 # Ensure logs directory exists
