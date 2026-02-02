@@ -3,7 +3,7 @@ rtsp: yes
 rtspTransports: [tcp]            # replaces 'protocols'
 rtspEncryption: "no"             # replaces 'encryption'
 # Use RTSP 8554 (standard unprivileged port, change if needed)
-rtspAddress: :8554
+rtspAddress: :554
 
 rtspAuthMethods: [digest]        # replaces 'authMethods'
 authMethod: internal
