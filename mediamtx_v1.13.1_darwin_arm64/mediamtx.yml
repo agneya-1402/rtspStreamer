@@ -1,11 +1,10 @@
 logLevel: info
 rtsp: yes
-rtspTransports: [tcp]            # replaces 'protocols'
-rtspEncryption: "no"             # replaces 'encryption'
-# Use RTSP 8554 (standard unprivileged port, change if needed)
+rtspTransports: [tcp]
+rtspEncryption: "no"
 rtspAddress: :554
 
-rtspAuthMethods: [digest]        # replaces 'authMethods'
+rtspAuthMethods: [digest]
 authMethod: internal
 authInternalUsers:
   - user: admin
@@ -15,7 +14,7 @@ authInternalUsers:
       - action: read
 
 paths:
-  "Streaming/Channels/101": 
-    source: publisher
+  # Matches every path the simulator publishes to (Hikvision, Dahua,
+  # CP Plus, Uniview, and generic path schemes all fall through to this).
   "~^.*$":
     source: publisher

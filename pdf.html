@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Intelligence Partner Program - Neuronetic Vision</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --primary: #5243FF; /* Signature Tech Purple */
+            --primary-light: #f0eeff;
+            --dark: #0f172a;
+            --text: #475569;
+            --text-dark: #0f172a;
+            --border: #e2e8f0;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --video-red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* Header Style */
+        header {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .logo-row img {
+            height: 44px;
+            width: auto;
+            display: block;
+        }
+
+        .program-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .header-desc {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-top: 10px;
+        }
+
+        /* About Us Banner */
+        .about-us-banner {
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary);
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 24px;
+            border-radius: 4px 8px 8px 4px;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 35px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            line-height: 1.6;
+        }
+
+        /* Section Layout Rules */
+        section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        /* Value Highlight Grid */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .value-card svg {
+            color: var(--primary);
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Universal Deployment Banner */
+        .universal-banner {
+            background: var(--dark);
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 35px;
+            page-break-inside: avoid;
+        }
+
+        .universal-banner svg {
+            width: 32px;
+            height: 32px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .universal-banner p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Deployment Process Grid */
+        .deployment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+
+        .step-number {
+            background: var(--primary-light);
+            color: var(--primary);
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+        .step-card p {
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            line-height: 1.45;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Recurring Commercial Profit Box */
+        .revenue-model-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f4f2ff 100%);
+            border: 1px solid #dcd7ff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            page-break-inside: avoid;
+        }
+
+        .revenue-model-box h3 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .revenue-model-box p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .formula-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            font-weight: 700;
+        }
+
+        .formula-term {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            color: var(--text-dark);
+        }
+
+        .formula-term.profit-style {
+            border-color: var(--success);
+            color: var(--success);
+            background: var(--success-light);
+        }
+
+        .formula-sign {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+        }
+
+        .lucrative-callout {
+            background: var(--primary-light);
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary);
+            padding: 14px 18px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lucrative-callout svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* Product Display Cards */
+        .product-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+
+        .product-title h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .product-title p {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .demo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f1f5f9;
+            color: var(--text-dark);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border);
+        }
+
+        .demo-link svg {
+            width: 12px;
+            height: 12px;
+            fill: var(--video-red);
+        }
+
+        .product-body-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 25px;
+        }
+
+        .features-column h4, .pricing-column h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: var(--text);
+        }
+
+        .features-list li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .pricing-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-table td {
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-dark);
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-val {
+            text-align: right;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .custom-pricing-note {
+            padding: 14px;
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        /* Standalone Bespoke Custom Pipeline Solutions Card */
+        .custom-pipeline-card {
+            background: var(--card-bg);
+            border: 2px dashed var(--primary);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+            margin-top: 10px;
+        }
+
+        .custom-pipeline-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .custom-pipeline-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .custom-pipeline-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .custom-pipeline-tagline {
+            font-size: 1.05rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .custom-pipeline-body {
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        /* Global Feature Grid */
+        .global-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        .global-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .global-feature-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* Terms & Protected Account Guidelines */
+        .terms-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            page-break-inside: avoid;
+        }
+
+        .protection-header {
+            background: var(--success-light);
+            border: 1px solid rgba(22, 163, 74, 0.2);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 20px;
+            color: #15803d;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .protection-header svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .term-bullet {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text);
+        }
+
+        .term-bullet svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* Modern Contact Block Section */
+        .contact-footer {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 26px 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            page-break-inside: avoid;
+        }
+
+        .contact-footer h3 {
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-cell {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-cell svg {
+            width: 18px;
+            height: 18px;
+            color: #94a3b8;
+            flex-shrink: 0;
+        }
+
+        .contact-lbl {
+            display: block;
+            font-size: 0.72rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            letter-spacing: 0.02em;
+        }
+
+        .contact-cell a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Global Print Configurations */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+            body {
+                background-color: #ffffff !important;
+                padding: 0;
+                font-size: 10pt;
+            }
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            header, .about-us-banner, .revenue-model-box, .step-card, .product-card, .custom-pipeline-card, .terms-card, .contact-footer, .universal-banner, .global-features-grid {
+                page-break-inside: avoid !important;
+                box-shadow: none !important;
+            }
+            .pricing-box {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .revenue-model-box {
+                background: #f4f2ff !important;
+                border: 1px solid #dcd7ff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .universal-banner {
+                background: var(--dark) !important;
+                color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .lucrative-callout {
+                background-color: #f0eeff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .protection-header {
+                background-color: var(--success-light) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .step-number {
+                background-color: #f0eeff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .about-us-banner {
+                background-color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Header Block -->
+    <header>
+        <div class="logo-row">
+            <img src="https://neuroneticvision.com/_next/image?url=%2Flogo.png&w=640&q=75" alt="Neuronetic Vision Logo">
+            <span class="program-badge">AI Video Intelligence Partner Program</span>
+        </div>
+        <h1>AI Video Intelligence Solutions</h1>
+        <p class="header-desc">Introduce advance computer vision capabilities directly into your portfolio. Sell multiple vertical business surveillance solutions to clients managed through a single software ecosystem.</p>
+    </header>
+
+    <!-- About Us Section -->
+    <div class="about-us-banner">
+        <strong>About Us:</strong> Neuronetic Vision Pvt. Ltd. builds AI-powered computer vision solutions that upgrade existing CCTV infrastructure into intelligent monitoring and analytics systems for security, retail, industrial, and public environments.
+    </div
+
+    <!-- Deployment Process -->
+    <section>
+        <h2 class="section-title">Deployment Process</h2>
+        <div class="deployment-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <p>Partner shares customer requirement and details (name, number, email, no. of CCTV)</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <p>Neuronetic Vision creates customer account and shares credentials and app to partner which he shares to customer</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <p>Install Windows Edge Application and Connect CCTV streams</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <p>Customer starts receiving Alerts</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <p>Partner bills customer monthly & collects payments</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <p>Partners send us our base price per customer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Business Advantages Section -->
+    <section>
+        <h2 class="section-title">Partner Program Advantages</h2>
+        <div class="value-grid">
+            <div class="value-card">
+                <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                Works with Existing IP CCTV Camera Frameworks
+            </div>
+            <div class="value-card">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><circle cx="12" cy="10" r="2"/></svg>
+                Zero Hardware Required
+            </div>
+            <div class="value-card">
+                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Quick Deployment & Setup
+            </div>
+            <div class="value-card">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 3v18M3 9h18"/></svg>
+                Clean, User-Friendly Dashboards
+            </div>
+        </div>
+    </section>
+
+    <!-- Universal Features Banner -->
+    <div class="universal-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <p><strong>Universal Deployment:</strong> Irrespective of the specific solution, all our products run seamlessly via a native Windows App and deliver instant, real-time video alerts straight to WhatsApp.</p>
+    </div>
+
+    <!-- Easy to Understand Commercial Profit Box -->
+    <section>
+        <h2 class="section-title">The Commercial Model</h2>
+        <div class="revenue-model-box">
+            <h3>Complete Partner Pricing Elasticity</h3>
+            <p>You manage customer billing relationships directly and maintain absolute freedom to set your final customer retail pricing metrics.</p>
+            <div class="formula-flex">
+                <div class="formula-term">Partner Base Subscription</div>
+                <div class="formula-sign">+</div>
+                <div class="formula-term profit-style">Your Profit Margin</div>
+                <div class="formula-sign">=</div>
+                <div class="formula-term">Final Customer Pricing</div>
+            </div>
+            <div class="lucrative-callout">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                This predictable, high-margin revenue model keeps coming in automatically as long as the client has an active ongoing subscription.
+            </div>
+        </div>
+    </section>
+
+    <!-- Suite Core Offerings Catalog -->
+    <section>
+        <h2 class="section-title">Product Intelligence Offerings</h2>
+        <div class="product-stack">
+            
+            <!-- Fortress AI -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-title">
+                        <h3>Fortress AI</h3>
+                        <p>Advanced Security & Surveillance Intelligence</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=U1qhb1lCOzY" target="_blank" class="demo-link">
+                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Demo
+                    </a>
+                </div>
+                <div class="product-body-grid">
+                    <div class="features-column">
+                        <h4>Included Features</h4>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Anti CCTV Tampering Alert</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Time-Based Intruder Alert</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sensitive Zone Intruder Alert</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fire and Smoke Detection</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-column">
+                        <h4>Partner Base Subscription</h4>
+                        <div class="pricing-box">
+                            <table class="pricing-table">
+                                <tr><td>Up to 6 Cameras</td><td class="price-val">₹4,899 / mo</td></tr>
+                                <tr><td>Up to 10 Cameras</td><td class="price-val">₹7,899 / mo</td></tr>
+                                <tr><td>Up to 16 Cameras</td><td class="price-val">₹9,899 / mo</td></tr>
+                                <tr><td>Up to 24 Cameras</td><td class="price-val">₹11,899 / mo</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BuildSafe AI -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-title">
+                        <h3>BuildSafe AI</h3>
+                        <p>Construction & Industrial Safety Compliance</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=araeMLdDhTA" target="_blank" class="demo-link">
+                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Demo
+                    </a>
+                </div>
+                <div class="product-body-grid">
+                    <div class="features-column">
+                        <h4>Included Features</h4>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated PPE & Helmet Detection</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Regulatory Safety Compliance Monitoring</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-Time Active Worker Shift Monitoring</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Restricted Industrial Zone Perimeter Control</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fall Detection</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-column">
+                        <h4>Partner Base Subscription</h4>
+                        <div class="pricing-box">
+                            <table class="pricing-table">
+                                <tr><td>Up to 4 Cameras</td><td class="price-val">₹3,199 / mo</td></tr>
+                                <tr><td>Up to 8 Cameras</td><td class="price-val">₹4,799 / mo</td></tr>
+                                <tr><td>Up to 16 Cameras</td><td class="price-val">₹8,499 / mo</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crowd Sense AI -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-title">
+                        <h3>Crowd Sense AI</h3>
+                        <p>Event, Exhibition & Public Space Intelligence</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=kIQgyS71Zsc" target="_blank" class="demo-link">
+                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch Demo
+                    </a>
+                </div>
+                <div class="product-body-grid">
+                    <div class="features-column">
+                        <h4>Included Features</h4>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Crowd Density Mapping & Congestion Control</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Crowd Movement Flow</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Suspicious Stationary Loitering & Intruder Alerts</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Camera Tamper Detection</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fire and Smoke Detection</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-column">
+                        <h4>Partner Base Subscription</h4>
+                        <div class="pricing-box">
+                            <table class="pricing-table">
+                                <tr><td>Up to 6 Cameras</td><td class="price-val">₹500 / day</td></tr>
+                            </table>
+                            <div class="custom-pricing-note">
+                                <strong>High Volume Scale:</strong> Large venue requirements are scoped via custom project parameters.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Retail Vision -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-title">
+                        <h3>Retail Vision</h3>
+                        <p>Retail Performance & Customer Behaviour Analytics</p>
+                    </div>
+                    <span class="demo-link" style="opacity:0.75; cursor:default; background:#f0eeff; color:var(--primary); border-color:#dcd7ff;">
+                        Analytics Engine
+                    </span>
+                </div>
+                <div class="product-body-grid">
+                    <div class="features-column">
+                        <h4>Included Features</h4>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Total Visitor Footfall Analytics & Entry Counting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Customer Traffic Path Heatmapping & Aisle Volume</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Queue Optimization Metrics & Checkout Line Audits</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Executive Reports Sent Straight to Management Channels</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-column">
+                        <h4>Partner Base Subscription</h4>
+                        <div class="pricing-box">
+                            <div class="custom-pricing-note" style="padding: 24px 16px;">
+                                <strong>Custom Deployment Quoting:</strong> Pricing is structured dynamically according to localized analysis scopes, active floor channels, and operational metrics.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Custom Card Section outside product catalog -->
+            <div class="custom-pipeline-card">
+                <div class="custom-pipeline-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    <h3>Custom AI Solutions</h3>
+                </div>
+                <p class="custom-pipeline-tagline">We’ll build a custom AI pipeline tailored just for you.</p>
+                <p class="custom-pipeline-body">
+                    If your client has highly unique site requirements not covered by our off-the-shelf suites, our team will design, train, and deploy a proprietary computer vision model specifically tailored to their operational needs. These specialized contracts are calculated and quoted via upfront development engineering fees combined with scalable deployment subscriptions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Master Global Features List -->
+    <section>
+        <h2 class="section-title">Comprehensive Feature Ecosystem</h2>
+        <div class="global-features-grid">
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Time-Based Intruder Detection</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Automated PPE & Helmet Detection</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Sensitive Zone Intruder Alerts</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Fall Detection Analytics</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Anti CCTV Tampering Defense</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Wildlife Intrusion Tracking</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Suspicious Loitering Detection</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Abandoned Bag Recognition</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Fire and Smoke Detection</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> ANPR Vehicle Number Plate Tracking</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Crowd Density & Movement Flow</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Visitor Footfall Analytics</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Active Worker Shift Monitoring</div>
+            <div class="global-feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5l10 -10"/></svg> Traffic Path Heatmapping</div>
+        </div>
+    </section>
+
+    <!-- Professional Terms & Client Protection Guarantee Section -->
+    <section>
+        <h2 class="section-title">Strategic Program Guidelines</h2>
+        <div class="terms-card">
+            
+            <div class="protection-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <div>
+                    <strong>Partner Client Protection Policy:</strong> We explicitly do not approach or pitch our solutions directly to your clients as long as they maintain an active subscription relationship with your agency. Furthermore, even after their eventual contract deactivation, we strictly maintain a non-approach policy for a fixed duration of time. It is entirely your exclusive client relationship.
+                </div>
+            </div>
+
+            <div class="terms-grid">
+                
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Partners are free to decide their own customer pricing and margins above Neuronetic Vision base subscription rates.
+                </div>
+                
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Partner manages customer relationships, CCTV installation, and onsite requirements.
+                </div>
+
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Neuronetic Vision manages AI software, cloud platform, and technical software support.
+                </div>
+                
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    All AI technology, software systems, algorithms, platform architecture and intellectual property remain the exclusive property of Neuronetic Vision Pvt. Ltd.
+                </div>
+
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Neuronetic Vision manages platform access, customer accounts, subscriptions, and technical operations.
+                </div>
+
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Unauthorized copying, reverse engineering, resale outside agreement, or replication of the platform is prohibited.
+                </div>
+
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Channel partnership does not provide exclusive geographic rights unless separately agreed in writing.
+                </div>
+
+                <div class="term-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Non-payment beyond the grace period may result in temporary suspension of customer access.
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Contact Call to Action Box -->
+    <section class="contact-footer">
+        <h3>Connect with Our Team</h3>
+        <div class="contact-grid">
+            <div class="contact-cell">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                    <span class="contact-lbl">Email Operations</span>
+                    <a href="mailto:contact@neuroneticvision.com">contact@neuroneticvision.com</a>
+                </div>
+            </div>
+            <div class="contact-cell">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                    <span class="contact-lbl">Direct Partner Line</span>
+                    <a href="tel:+918850126827">+91 88501 26827</a>
+                </div>
+            </div>
+            <div class="contact-cell">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <div>
+                    <span class="contact-lbl">Web Ecosystem</span>
+                    <a href="https://neuroneticvision.com" target="_blank">neuroneticvision.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
