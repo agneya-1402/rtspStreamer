@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 # =====================================================================
 #                        USER CONFIGURATION
 # =====================================================================
-DEVICE_IP = "192.168.1.12"     # Your machine's LAN IP address
+DEVICE_IP = "192.168.1.10"     # Your machine's LAN IP address
 HTTP_PORT_BASE = 8080          # First ONVIF HTTP port. Each simulated brand
                                 # device gets its own port: base, base+1, base+2 ...
 
@@ -39,7 +39,7 @@ USE_STREAM_COPY = True
 # real-world path conventions, side by side, in one run.
 #
 # Supported keys: "hikvision", "dahua", "cpplus", "uniview", "generic"
-SIMULATED_BRANDS = ["hikvision", "dahua", "cpplus", "generic"]
+SIMULATED_BRANDS = ["hikvision"]
 
 # How VIDEO_FILES gets divided across the brands in SIMULATED_BRANDS
 # when more than one brand is listed:
@@ -65,7 +65,10 @@ VIDEO_FILES = [
     Path("videos/build/3.mp4"),
     Path("videos/Table_CleanAlert_1.mp4"),
     Path("videos/entry_exit_1.mp4"),
-    Path("videos/build/20260506_164130_Camera_192.168.0.112_-_Ch2.mp4"),
+    Path("videos/entry_exit_4.mp4"),
+    Path("videos/2_people.mp4"),
+    Path("videos/4_people.mp4"),
+    Path("videos/12_people.mp4"),
     Path("videos/build/20260506_165232_Camera_192.168.0.115_-_Ch56.mp4"),
     Path("videos/build/20260727_152351_Camera_192.168.0.128_-_Ch0.mp4"),
     Path("videos/build/20260727_153316_Camera_192.168.0.114_-_Ch1.mp4"),
